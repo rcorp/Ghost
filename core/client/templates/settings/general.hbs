@@ -11,16 +11,16 @@
         <fieldset>
 
             <div class="form-group">
-                <label for="blog-title">Blog Title</label>
+                <label for="blog-title">Publication Title</label>
                 {{input id="blog-title" name="general[title]" type="text" value=model.title}}
-                <p>The name of your blog</p>
+                <p>The name of your publication</p>
             </div>
 
             <div class="form-group description-container">
-                <label for="blog-description">Blog Description</label>
+                <label for="blog-description">Publication Description</label>
                 {{textarea id="blog-description" name="general[description]" value=model.description}}
                 <p>
-                    Describe what your blog is about
+                    Describe what your publication is about
                     {{gh-count-characters model.description}}
                 </p>
 
@@ -28,7 +28,7 @@
         </fieldset>
 
         <div class="form-group">
-            <label>Blog Logo</label>
+            <label>Publication Logo</label>
             {{#if model.logo}}
                 <img class="blog-logo" {{bind-attr src=model.logo}} alt="logo" role="button" {{action "openModal" "upload" this "logo"}}>
             {{else}}
@@ -38,7 +38,7 @@
         </div>
 
         <div class="form-group">
-            <label>Blog Cover</label>
+            <label>Publication Cover</label>
             {{#if model.cover}}
                 <img class="blog-cover" {{bind-attr src=model.cover}} alt="cover photo" role="button" {{action "openModal" "upload" this "cover"}}>
             {{else}}
@@ -82,7 +82,7 @@
                        value=model.activeTheme
                        selection=selectedTheme}}
                </span>
-                <p>Select a theme for your blog</p>
+                <p>Select a theme for your publication</p>
             </div>
         </fieldset>
     </form>
